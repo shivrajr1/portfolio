@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.press-start-2p-regular {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+html{
+    scroll-behavior: smooth;
+}
+.root{
+    line-height: 25px; 
+    color: #525252;
+    background-color: #f6d4b1;
+}
+.nav{
+    background-color: rgb(246, 212, 177);
+    z-index: 2;
+    top: 0;
+    position: sticky;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin:0 20px;
+    
+}
+
+.nav-link {
+    display: flex;
+}
+.nav-link a{
+    color: #525252;
+    margin: 0 10px;
+    text-decoration: none;
+}
+.nav-link a:hover{
+    color: #f6d4b1;
+    background-color: #525252;
+    padding: 5px;
+}
+
+#home{
+    max-width: 90%;
+    margin: auto;
+    text-align: center;
+    height: 90vh;
+    background-color: #1d1c1c;
+    color: #ef9337;
+}
+#home .scanning{
+    width: 100%;
+    height: 5px;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(186, 186, 186, 0.995));
+    position: relative;
+    animation: scan 1.2s infinite;
+  }
+  
+  @keyframes scan {
+    from {top: 0px;}
+    to {top: 90vh;}
+  }
+#home span{
+    display: flex;
+    justify-content: space-around;
+}
+.home1{
+    margin-top: 25%;
+}
+.home1 h1{
+    line-height: 35px; 
+}
+.home2{
+    margin-top: 15vh;
+}
+.home2 img{
+    max-width: 100%;
+}
+
+#about h1{
+    padding: 10px;
+    color: #f6d4b1;
+    text-align: center;
+    background-color: #525252;
+    
+}
+
+#about{
+    padding: 10px;
+    margin: 20vh auto;
+    max-width: 600px;
+    font-size: 14px;
+}
+#project{
+    font-size: 14px;
+    padding: 10px;
+    max-width: 600px;
+    margin: auto;
+}
+#skill{
+    color: #f6d4b1;
+    background-color: #1d1c1c;
+    font-size: 14px;
+    padding: 10px;
+    width: 90%;
+    margin:50px auto;
+}
+.skill_img{
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+}
+#skill img{
+    height: 100%;
+    width: 100%;
+}
+#contact{
+    font-size: 14px;
+    padding: 10px;
+    margin: auto;
+    padding: 30px;
+    max-width: 600px;
+}
+#contact h2,h3{
+    margin-top: 20px;
+}
+h2{
+    text-align: center;
+    margin: 50px 0;
+}
+@media (max-width:650px) {
+    .nav{
+        flex: none;
+    }
+    .nav-link {
+        margin-left: 1400px;
+    }
+    #home span{
+        flex-direction: column;
+    }
+    .home1{
+        margin:0 auto;
+    }
+    .home2{
+        margin:0 auto;
+    }
+    .nav2{
+        margin: 0;
+        padding: 50px;
+        background-color: rgba(246, 212, 177,0.95);
+        display: block;
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+        .nav-link {
+            flex-direction: column;
+            margin-left: 0;
+        }
+        
+    }
+    .nav2 div a{
+        margin: 30px;
+    }
+}

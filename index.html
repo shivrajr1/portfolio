@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Shivraj Rajbhar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body class="press-start-2p-regular">
+    <div class="root">
+        <nav class="nav " id="nav">
+            <div class="home-icon"id="Menu">Menu</div>
+            <div class="nav-link">
+                <a href="#home" class="scanning">home</a>
+                <a href="#about">about</a>
+                <a href="#project">project</a>
+                <a href="#skill">skill</a>
+                <a href="#contact">contact</a>
+            </div>
+        </nav>
+        <div id="home">
+            <div class="scanning"></div>
+            <span>
+                <div class="home1">
+                    Hi there,<br><br>
+                    <h1>I'm Shivraj Rajbhar</h1><br>
+                    . Software Developer
+                </div>
+                <div class="home2">
+                    <img src="./imgs/pxArt.png" alt="img" />
+                </div>
+            </span>
+            <br><br>
+            welcome to my portfolio<br />
+            ->-> scroll to get started
+        </div>
+        <div id="about">
+            <h1>Hi there</h1><br><br>
+            <p>My name is Shivraj Rajbhar, I’m a full stack software developer. I have a passion for all things
+                technology from software developer & learning to development.</p><br>
+            <p>In addition to my love of technology , I am also interested in education, history, economics and
+                politics.</p><br>
+            <p>Below are details of some of the projects I have developed over my years of coding experience.</p>
+        </div>
+        <hr style="width: 90%;margin: auto;">
+        <div id="project">
+            <h2>Projects</h2>
+            <h3><a href="https://shivrajterminal.netlify.app/">terminal</a></h3><br>.Developed a rental application that
+            shows hotels for rent <br>
+            .Technology : Mongodb , Express.js , React.js , Node.js <br>.Consept : role based authentication and
+            authrization.
+            <h3><a href="https://toor.onrender.com/">traveller</a></h3><br>.Developed a terminal-based application that
+            performs command (cd , ls , pwd , open , help , exite) <br>.Technology : html , css , Javascript.
+            <br>.Consept : tree data structure
+        </div>
+        <div id="skill">
+            <h2>My skills</h2>
+            <div class="skill_img">
+            <img src="./imgs/mongodb.png"><img src="./imgs/node+express.png"><img src="./imgs/react.png"><img
+                src="./imgs/redux.png"><img src="./imgs/nextjs.png"><img src="./imgs/javascript.png"><img
+                src="./imgs/dsa.png"><img src="./imgs/java.png"><img src="./imgs/git.png"><img
+                src="./imgs/github.png"><img src="./imgs/oops.png"><img src="./imgs/sql.png"><img src="./imgs/css.png">
+            </div>
+        </div>
+        <hr style="width: 90%;margin:50px auto;">
+        <div id="contact">
+            <h2>Contact Us</h2><br><br>
+            if you have any questions or need assistance , feel free to reach out to us.
+            <h3>Location </h3>:
+            delhi , 110092
+            <h3>Email</h3>: shivrajrajbhar9319@gmail.com
+            <h3>Mobile </h3>: 9319351162
+            <h3>Social Media</h3>
+            <a href="#">Twiter</a> ,
+            <a href="#">Instagram</a>
+        </div>
+    </div>
+</body>
+<script>
+    window.addEventListener(`scroll`, function (e) {
+        const heroOpas = this.scrollY / 700;
+        if (heroOpas === 0) {
+            home.style.opacity = 1;
+        }
+        if (heroOpas > 0) {
+            home.style.opacity = `${1 - heroOpas}`;
+            home.style.transform = (window.pageYOffset / 5)
+        }
+    });
+    document.getElementById("nav").addEventListener("click",(e)=>{
+        if(document.getElementById("nav").classList.length==2){
+            document.getElementById("nav").classList.remove("nav2")
+        }else{
+            document.getElementById("nav").classList.add("nav2")
+        }
+    })
+</script>
+
+</html>
