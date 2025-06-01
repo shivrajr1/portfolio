@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shivraj Rajbhar Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link href="index.css" rel="stylesheet" />
+
+ 
+</head>
+
+<body>
+  <div class="root">
+    <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+      <div class="home-icon" id="Menu" tabindex="0" aria-label="Toggle menu" role="button" aria-expanded="false">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="nav-link" id="nav-links">
+        <a href="#home" class="scanning">Home</a>
+        <a href="#about">About</a>
+        <a href="#project">Projects</a>
+        <a href="#skill">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <section id="home" tabindex="-1" aria-label="Introduction">
+      <!-- <div class="scanning" aria-hidden="true"></div> -->
+      <div>
+        <div class="home1">
+          <p>Hi there,</p>
+          <h1>I'm Shivraj Rajbhar</h1>
+          <p>Software Developer</p>
+        </div>
+        <div class="home2">
+          <img src="./imgs/profile.png" alt="Portrait of Shivraj Rajbhar" />
+        </div>
+      </div>
+      <p class="welcome-text">Welcome to my portfolio &nbsp;→ Scroll to get started</p>
+    </section>
+
+    <section id="about" tabindex="-1" aria-label="About me">
+      <h1>Hi there</h1>
+      <p>
+        My name is Shivraj Rajbhar, I’m a full stack software developer. I have a passion for all things technology,
+        from software development to continuous learning.
+      </p>
+      <p>
+        In addition to technology, I am also interested in education, history, economics, and politics.
+      </p>
+      <p>
+        Below are some projects I have developed during my coding journey.
+      </p>
+    </section>
+
+    <hr />
+
+    <section id="project" tabindex="-1" aria-label="Projects">
+      <h2>Projects</h2>
+
+      <article>
+        <h3><a href="https://shivrajterminal.netlify.app/" target="_blank" rel="noopener noreferrer">Terminal</a></h3>
+        <p>Developed a rental application that shows hotels for rent.</p>
+        <p><strong>Technologies:</strong> MongoDB, Express.js, React.js, Node.js</p>
+        <p><strong>Concept:</strong> Role-based authentication and authorization.</p>
+      </article>
+
+      <article>
+        <h3><a href="https://toor.onrender.com/" target="_blank" rel="noopener noreferrer">Traveller</a></h3>
+        <p>Built a terminal-based application performing commands like <code>cd</code>, <code>ls</code>, <code>pwd</code>, <code>open</code>, <code>help</code>, and <code>exit</code>.</p>
+        <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+        <p><strong>Concept:</strong> Tree data structure.</p>
+      </article>
+
+      <article>
+        <h3><a href="https://web-99.netlify.app/" target="_blank" rel="noopener noreferrer">Web-99</a></h3>
+        <p>Real-time data handling using Google APIs to post live data to Google Sheets.</p>
+        <p><strong>Technologies:</strong> HTML, CSS, JavaScript, React, Netlify</p>
+      </article>
+
+      <article>
+        <h3><a href="https://realstate-apartment.netlify.app/" target="_blank" rel="noopener noreferrer">Realstate-apartment</a></h3>
+        <p>Showcases properties for sale or rent with images, descriptions, and pricing.</p>
+        <p><strong>Technologies:</strong> HTML, CSS, JavaScript, React, Netlify</p>
+      </article>
+    </section>
+
+    <section id="skill" tabindex="-1" aria-label="Skills">
+      <h2>My Skills</h2>
+      <div class="skill_img" aria-label="Skills logos">
+        <img src="./imgs/mongodb.png" alt="MongoDB logo" />
+        <img src="./imgs/node+express.png" alt="Node.js and Express logo" />
+        <img src="./imgs/react.png" alt="React logo" />
+        <img src="./imgs/redux.png" alt="Redux logo" />
+        <img src="./imgs/nextjs.png" alt="Next.js logo" />
+        <img src="./imgs/javascript.png" alt="JavaScript logo" />
+        <img src="./imgs/dsa.png" alt="Data Structures and Algorithms icon" />
+        <img src="./imgs/java.png" alt="Java logo" />
+        <img src="./imgs/git.png" alt="Git logo" />
+        <img src="./imgs/github.png" alt="GitHub logo" />
+        <img src="./imgs/oops.png" alt="Object Oriented Programming icon" />
+        <img src="./imgs/sql.png" alt="SQL logo" />
+        <img src="./imgs/css.png" alt="CSS logo" />
+      </div>
+    </section>
+
+    <hr />
+
+    <section id="contact" tabindex="-1" aria-label="Contact">
+        <h2>Contact Us</h2>
+  <p>If you have any questions or need assistance, feel free to reach out.</p>
+  
+  <h3>Location</h3>
+  <p>Delhi, 110092</p>
+  
+  <h3>Email</h3>
+  <p><a href="mailto:shivrajrajbhar9319@gmail.com">shivrajrajbhar9319@gmail.com</a></p>
+  
+  <h3>Mobile</h3>
+  <p><a href="tel:+919319351162">+91 9319351162</a></p>
+  
+  <h3>Social Media</h3>
+  <p>
+    <a href="#" aria-label="Twitter profile">Twitter</a>, 
+    <a href="#" aria-label="Instagram profile">Instagram</a>
+  </p>
+    </section>
+  </div>
+
+  <script>
+  const nav = document.getElementById("nav");
+  const menu = document.getElementById("Menu");
+  const navLinks = document.getElementById("nav-links");
+
+  function toggleNav() {
+    const isOpen = nav.classList.toggle("nav2");
+    menu.classList.toggle("menu-open");
+    menu.setAttribute("aria-expanded", isOpen);
+  }
+
+  menu.addEventListener("click", toggleNav);
+
+  menu.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      toggleNav();
+    }
+  });
+
+  document.querySelectorAll('.nav-link a').forEach(link => {
+    link.addEventListener("click", () => {
+      if (window.innerWidth <= 650) {
+        nav.classList.remove("nav2");
+        menu.classList.remove("menu-open");
+        menu.setAttribute("aria-expanded", false);
+      }
+    });
+  });
+</script>
+
+</body>
+
+</html>
